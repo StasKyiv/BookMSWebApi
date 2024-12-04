@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  web-api:
+    build:
+      context: "/Users/stanislav/Desktop/TestTask/WebApi/BookCatalogManagementSystem.Api/BookCatalogManagementSystem.Api"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/BookCatalogManagementSystem.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "bookmswebapi:dev"
+    ports: []
+    volumes:
+    - "/Users/stanislav/Desktop/TestTask/WebApi/BookCatalogManagementSystem.Api/BookCatalogManagementSystem.Api:/app:rw"
+    - "/Users/stanislav/Desktop/TestTask/WebApi/BookCatalogManagementSystem.Api:/src:rw"
+    - "/Users/stanislav/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
